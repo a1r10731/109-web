@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+"
+        crossorigin="anonymous"></script>
+    <script src="./Untitled-10.js"></script>
+    <!-- jQuery -->
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script> -->
+    <!-- Select2 -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+    <!-- Select2 i18 中文翻譯 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/i18n/zh-TW.js"></script>
+
+
+    <style type="text/css">
+        .close {
+            color: #fff;
+        }
+
+        .close:hover,
+        .close:focus,
+        .close:active:hover {
+            color: #fff;
+        }
+
+        .modal-header {
+            color: #fff;
+            /* background-color: #375ABB; */
+            /* background-image: url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/full page/img(11).jpg"); */
+            /* background: rgb(2, 0, 36); */
+            background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+        }
+
+        .btn-default {
+            color: #fff;
+            width: 120px;
+            background-color: #FB8F8A;
+            border-color: #FB8F8A;
+        }
+
+        .btn-default:hover,
+        .btn-default:focus,
+        .btn-default:active:hover {
+            color: #fff;
+            background-color: brown;
+            border-color: brown;
+        }
+
+        .col-md-4 {
+            /* height: 70px; */
+            margin-bottom: 20px;
+        }
+
+        .modal-footer {
+            background-image: linear-gradient(to top, #dad4ec 0%, #dad4ec 1%, #f3e7e9 100%);
+        }
+
+
+        /** SPINNER CREATION **/
+        .loader {
+            position: relative;
+            text-align: center;
+            margin: 15px auto 35px auto;
+            z-index: 9999;
+            display: block;
+            width: 80px;
+            height: 80px;
+            border: 10px solid rgba(0, 0, 0, 0.3);
+            border-radius: 50%;
+            border-top-color: #000;
+            animation: spin 1s ease-in-out infinite;
+            -webkit-animation: spin 1s ease-in-out infinite;
+        }
+
+        /** æœƒè½‰çš„ **/
+        @keyframes spin {
+            to {
+                -webkit-transform: rotate(360deg);
+            }
+        }
+
+        @-webkit-keyframes spin {
+            to {
+                -webkit-transform: rotate(360deg);
+            }
+        }
+
+        /** MODAL STYLING **/
+        .loader modal-content {
+            border-radius: 0px;
+            box-shadow: 0 0 20px 8px rgba(0, 0, 0, 0.7);
+        }
+
+        .loader modal-backdrop.show {
+            opacity: 0.75;
+        }
+
+        .loader-txt p {
+            font-size: 13px;
+            color: #666;
+        }
+
+        .loader-txt p small {
+            font-size: 11.5px;
+            color: #999;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- Trigger the modal with a button -->
+    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+    <button type="button" class="btn btn-info btn-lg" id="load_me_baby">Loading Modal</button>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title"><i class="fas fa-registered"></i> Resource M</h4>
+                </div>
+
+
+                <!-- Modal 1-->
+                <div class="modal-body" id="modal_1">
+                    <!--modal-body加2個可以縮更進去-->
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label for="inputState">State</label><br>
+                                <select id="inputState_1" class="form-control">
+                                    <option selected id="">Choose...</option>
+                                    <option>...</option>
+                                    <option id="">...</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="inputState">State</label>
+                                <select id="inputState_2" class="form-control">
+                                    <option selected>Choose...</option>
+                                    <option>...</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="inputState">State</label>
+                                <select id="inputState" class="form-control">
+                                    <option selected>Choose...</option>
+                                    <option>...</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label for="inputState">State</label>
+                                <select id="inputState" class="form-control">
+                                    <option selected>Choose...</option>
+                                    <option>...</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="inputState">State</label>
+                                <select id="inputState" class="form-control">
+                                    <option selected>Choose...</option>
+                                    <option>...</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="inputState">State</label>
+                                <select id="inputState" class="form-control">
+                                    <option selected>Choose...</option>
+                                    <option>...</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label for="inputState">State</label>
+                                <select id="inputState" class="form-control">
+                                    <option selected>Choose...</option>
+                                    <option>...</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="inputState">State</label>
+                                <select id="inputState" class="form-control">
+                                    <option selected>Choose...</option>
+                                    <option>...</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="inputState">State</label>
+                                <select id="inputState" class="form-control">
+                                    <option selected>Choose...</option>
+                                    <option>...</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- modal-footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- LOADING MODAL -->
+    <div class="modal fade" id="loadMe" tabindex="-1" role="dialog" aria-labelledby="loadMeLabel">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-body text-center">
+                    <div class="loader"></div>
+                    <div clas="loader-txt">
+                        <p>Check out this slick bootstrap spinner modal. <br><br><small>We are addicted to Bootstrap...
+                                #love</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- js -->
+    <script>
+        // $(document).ready(function () {
+        //     //ajax code here (example for $.post) using test page from https://reqres.in
+        //     //Adding a delay so we can see the functionality of the loader while request processes
+        //     $("#load_me_baby").on("click", function (e) {
+        //         e.preventDefault();
+        //         $("#loadMe").modal({
+        //             backdrop: "static", //remove ability to close modal with click
+        //             keyboard: false, //remove option to close with keyboard
+        //             show: true //Display loader!
+        //         });
+        //         var testUrl = "https://reqres.in/api/users?delay=3";
+        //         $.get(
+        //             testUrl,
+        //             function (response) {
+        //                 if (response.data[0]) {
+        //                     //if you received a successful return, remove the modal. Either way remove the modal!!
+        //                     var resOutput =
+        //                         '<h4 style="color: white">Modal closed and output displayed!</h4><p style="color: white">This is <b>' +
+        //                         response.data[0].first_name +
+        //                         " " +
+        //                         response.data[0].last_name +
+        //                         '</b></p><img src="' +
+        //                         response.data[0].avatar +
+        //                         '" class="img-responsive img-thumbnail" alt="avatar" style="margin-top: 13px; max-width="200px;">';
+        //                     $("#output").html(resOutput);
+        //                     $("#loadMe").modal("hide");
+        //                 } else {
+        //                     $("#output").html(
+        //                         '<div class="alert alert-warning"><h4>Uh oh!</h4></div>'
+        //                     );
+        //                 }
+        //             },
+        //             "json"
+        //         );
+        //     });
+
+        //         $('#inputState_1').select2({
+        //             debug: true,
+        //             width: '100%',
+        //             minimumInputLength: 0,
+        //             dataType: 'json',
+        //             ajax: {
+        //                 url: 'https://reqres.in/api/users',
+        //                 data: function (params) {
+        //                     console.log('params =>', params);
+        //                     var query = {
+        //                         search: params.term,
+        //                         v: "new"
+        //                     }
+        //                     return query;
+        //                 },                    
+        //                 processResults:
+        //                     function (data) {
+        //                         console.log('results =>', data);
+        //                         data = data.data.reduce(function (o, i) {
+        //                             o.push({
+        //                                 id: i.id,
+        //                                 text: i.first_name
+        //                             });
+        //                             return o;
+        //                         }, []);
+        //                         console.log('results =>', data);
+        //                         return {
+        //                             results: data
+        //                         };
+        //                         console.log('results =>', data[0]);
+        //                         return {
+        //                             results: data[0]
+        //                         };
+        //                     }                 
+        //             }                
+        //     });          
+      
+        // $('#inputState_2').select2({
+        //     debug: true,
+        //     width: '100%',
+        //     minimumInputLength: 0,
+        //     dataType: 'json',
+        //     ajax: {
+        //         url: 'https://reqres.in/api/users?delay=3',
+        //         // data: function (params) {
+        //         //     console.log('params =>', params);
+        //         //     var query = {
+        //         //         search: params.term,
+        //         //         v: "new"
+        //         //     }
+        //         //     return query;
+        //         // },
+        //         beforeSend: function (XMLHttpRequest) {
+        //             //alert("loading");                                                
+        //             $("#loadMe").modal('toggle');
+        //             $("#loadMe").modal({
+        //                 backdrop: "static", //remove ability to close modal with click
+        //                 keyboard: false, //remove option to close with keyboard
+        //                 show: true //Display loader!
+        //             });
+        //         },
+        //         processResults:
+        //             function (data) {
+        //                 console.log('results =>', data);
+        //                 data = data.data.reduce(function (o, i) {
+        //                     o.push({
+        //                         id: i.id,
+        //                         text: i.first_name
+        //                     });
+        //                     return o;
+        //                 }, []);
+        //                 console.log('results =>', data);
+        //                 return {
+        //                     results: data
+        //                 };
+        //             },
+        //         success:
+        //             function (data) {
+        //                 $("#loadMe").modal("hide");
+        //                 alert("success");
+        //             }
+
+        //     }
+        // });
+
+        // });
+    </script>
+
+</body>
+
+</html>

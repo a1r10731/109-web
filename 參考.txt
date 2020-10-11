@@ -1,0 +1,34 @@
+網頁上好用小圖使用CSS ICON 圖示框架Font Awesome
+https://ucamc.com/e-learning/css/48-font-awesome-icon-css
+https://fontawesome.com/icons?d=gallery&m=free
+
+https://www.w3schools.com/bootstrap/bootstrap_modal.asp
+
+[BS] Bootstrap 4 自訂容器和欄間距寬度（Custom Container and Gutters Width）
+https://pjchender.blogspot.com/2017/10/bs-bootstrap-4-custom-container-and.html
+
+https://themes.getbootstrap.com/preview/?theme_id=19860
+
+bg-img
+https://cssgradient.io
+
+https://prevwong.github.io/awesome-select/
+
+--------------------------------
+> loading block
+https://codepen.io/luv2code/pen/evaBXm
+
+> spinner
+https://tobiasahlin.com/spinkit/
+
+> select2 ajax
+https://jsnwork.kiiuo.com/archives/1583/jquery-%E5%A5%BD%E7%94%A8%E7%9A%84%E5%A4%96%E6%8E%9B-select2%E3%80%82%E4%BB%8B%E7%B4%B9ajax%E6%96%B9%E6%B3%95%E3%80%82/
+
+> web api
+https://reqres.in/
+
+> Select2 won't load remote json response
+https://stackoverflow.com/questions/53103976/select2-wont-load-remote-json-response
+
+> [jQuery+PHP] Ajax で連動プルダウンを作る方法と高速化
+https://agohack.com/ajax-cascade-dropdown-performance/

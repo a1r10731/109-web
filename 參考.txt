@@ -32,3 +32,8 @@ https://stackoverflow.com/questions/53103976/select2-wont-load-remote-json-respo
 
 > [jQuery+PHP] Ajax で連動プルダウンを作る方法と高速化
 https://agohack.com/ajax-cascade-dropdown-performance/
+
+--------------------------------
+>切換 Shell
+https://medium.com/az-%E4%B8%8B%E7%AD%86%E8%A8%98/vs-code-%E5%85%A5%E9%96%80-%E7%B5%82%E7%AB%AF%E6%A9%9F%E8%88%87%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4-9c9bf5ed04bd
+https://qa.1r1g.com/sf/ask/3039934201/

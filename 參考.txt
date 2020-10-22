@@ -49,3 +49,7 @@ https://www.codeproject.com/Articles/1274703/ASP-NET-Gridview-in-Web-Forms-using
 
 > ASP.NET GridView CSS Designing using Bootstrap
 https://parallelcodes.com/asp-net-gridview-css-design-using-bootstrap/
+
+--------------------------------
+> GridViewRow
+https://dotblogs.com.tw/kennyshu/2009/07/20/9596

@@ -1,0 +1,89 @@
+<html lang="en" class=""><head>
+
+  <meta charset="UTF-8">
+  <title>CodePen Demo</title>
+
+  <meta name="robots" content="noindex">
+
+  <link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+  <link rel="mask-icon" type="" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111">
+  <link rel="canonical" href="https://codepen.io/keikei39/pen/rNLxYyq">
+
+  
+  
+
+  <style class="INLINE_PEN_STYLESHEET_ID">
+    @charset "UTF-8";
+body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 25em;
+  padding: 0;
+  margin: 0;
+  background-color: #f8efd4;
+}
+
+h2 {
+  font-family: 微軟正黑體;
+  text-align: center;
+  margin-top: 0;
+  color: #ffa5a5;
+}
+
+.loader {
+  margin: auto;
+  margin-top: 8em;
+  margin-bottom: 1em;
+  width: 20em;
+  height: 1em;
+  background: transparent;
+  background-position: -10px 0;
+  border: solid 1px #555555;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+.loader:before {
+  content: "";
+  width: 200%;
+  height: 100%;
+  position: absolute;
+  animation: loader 10s ease-out infinite;
+  background: linear-gradient(to right, #ffa5a5 0%, #ffa5a5 50%, #eeeeee 50%, #eeeeee 100%);
+}
+
+@keyframes loader {
+  0% {
+    left: -100%;
+  }
+  75% {
+    left: -10%;
+  }
+  85% {
+    left: -5%;
+  }
+  95% {
+    left: 0;
+  }
+}
+  </style>
+
+  
+<script src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeConsoleRunner-7f4d47902dc785f30dedcac9c996b9f31d4dfcc33567cc48f0431bc918c2bf05.js"></script>
+<script src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeRefreshCSS-bb9a2ba1f03f6147732cb3cd52ac86c6b24524aa87a05ed0b726f11e46d7e277.js"></script>
+<script src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeRuntimeErrors-4f205f2c14e769b448bcf477de2938c681660d5038bc464e3700256713ebe261.js"></script>
+</head>
+
+<body>
+  
+
+  <div class="loader"> </div>
+  <h2>loading...</h2>
+
+  
+<script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
+  <script src="https://cdpn.io/cp/internal/boomboom/pen.js?key=pen.js-a64227c0-bd10-a986-5f44-c8a147b84559" crossorigin=""></script>
+
+
+</body></html>

@@ -1,0 +1,235 @@
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+    <meta name="apple-mobile-web-app-title" content="CodePen">
+
+    <link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+
+    <link rel="mask-icon" type="" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg"
+        color="#111">
+
+
+    <title>CodePen - Bootstrap Datepicker Material Look with Material Input</title>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <style>
+        body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'arial', sans-serif;
+  background: #eeeeee;
+}
+.wrapper {
+  max-width: 560px;
+  margin: 100px auto;
+}
+label {
+  position: relative;
+  display: block;
+}
+label > input {
+  position: relative;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #9e9e9e;
+  border-radius: 0;
+  outline: none;
+  height: 45px;
+  width: 100%;
+  font-size: 16px;
+  margin: 0 0 30px 0;
+  padding: 0;
+  box-shadow: none;
+  box-sizing: content-box;
+  transition: all .3s;
+}
+label > input:valid + span {
+  transform: translateY(-25px) scale(0.8);
+  transform-origin: 0;
+}
+label > input:valid {
+  border-bottom: 1px solid #3F51B5;
+  box-shadow: 0 1px 0 0 #3F51B5;
+}
+label > span {
+  color: #9e9e9e;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 16px;
+  cursor: text;
+  transition: .2s ease-out;
+}
+label > input:focus + span {
+  transform: translateY(-25px) scale(0.8);
+  transform-origin: 0;
+  color: #3F51B5;
+}
+label > input:focus {
+  border-bottom: 1px solid #3F51B5;
+  box-shadow: 0 1px 0 0 #3F51B5;
+}
+
+
+
+
+/*Bootstrap Calendar*/
+.datepicker {
+    border-radius: 0;
+    padding: 0;
+}
+.datepicker-days table thead, .datepicker-days table tbody, .datepicker-days table tfoot {
+    padding: 10px;
+    display: list-item;
+}
+.datepicker-days table thead, .datepicker-months table thead, .datepicker-years table thead, .datepicker-decades table thead, .datepicker-centuries table thead {
+    background: #3546b3;
+    color: #ffffff;
+    border-radius: 0;
+}
+.datepicker-days table thead tr:nth-child(2n+0) td, .datepicker-days table thead tr:nth-child(2n+0) th {
+    border-radius: 3px;
+}
+.datepicker-days table thead tr:nth-child(3n+0) {
+    text-transform: uppercase;
+    font-weight: 300 !important;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.7);
+}
+.table-condensed > tbody > tr > td, .table-condensed > tbody > tr > th, .table-condensed > tfoot > tr > td, .table-condensed > tfoot > tr > th, .table-condensed > thead > tr > td, .table-condensed > thead > tr > th {
+    padding: 11px 13px;
+}
+.datepicker-months table thead td, .datepicker-months table thead th, .datepicker-years table thead td, .datepicker-years table thead th, .datepicker-decades table thead td, .datepicker-decades table thead th, .datepicker-centuries table thead td, .datepicker-centuries table thead th {
+    border-radius: 0;
+}
+.datepicker td, .datepicker th {
+    border-radius: 50%;
+    padding: 0 12px;
+}
+.datepicker-days table thead, .datepicker-months table thead, .datepicker-years table thead, .datepicker-decades table thead, .datepicker-centuries table thead {
+    background: #3546b3;
+    color: #ffffff;
+    border-radius: 0;
+}
+.datepicker table tr td.active, .datepicker table tr td.active:hover, .datepicker table tr td.active.disabled, .datepicker table tr td.active.disabled:hover {
+    background-image: none;
+}
+.datepicker .prev, .datepicker .next {
+    color: rgba(255, 255, 255, 0.5);
+    transition: 0.3s;
+    width: 37px;
+    height: 37px;
+}
+.datepicker .prev:hover, .datepicker .next:hover {
+    background: transparent;
+    color: rgba(255, 255, 255, 0.99);
+    font-size: 21px;
+}
+.datepicker .datepicker-switch {
+    font-size: 24px;
+    font-weight: 400;
+    transition: 0.3s;
+}
+.datepicker .datepicker-switch:hover {
+    color: rgba(255, 255, 255, 0.7);
+    background: transparent;
+}
+.datepicker table tr td span {
+    border-radius: 2px;
+    margin: 3%;
+    width: 27%;
+}
+.datepicker table tr td span.active, .datepicker table tr td span.active:hover, .datepicker table tr td span.active.disabled, .datepicker table tr td span.active.disabled:hover {
+  background-color: #3546b3;
+  background-image: none;
+}
+.dropdown-menu {
+    border: 1px solid rgba(0,0,0,.1);
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+}
+.datepicker-dropdown.datepicker-orient-top:before {
+    border-top: 7px solid rgba(0,0,0,.1);
+}
+</style>
+
+    <script>
+        window.console = window.console || function (t) { };
+    </script>
+
+
+
+    <script>
+        if (document.location.search.match(/type=embed/gi)) {
+            window.parent.postMessage("resize", "*");
+        }
+    </script>
+
+
+    <script async="" src="/cdn-cgi/bm/cv/669835187/api.js"></script>
+</head>
+
+<body translate="no">
+    2<div class="wrapper">
+        <label>
+            <input type="text" required="required">
+            <span>Name</span>
+        </label>
+
+        <label>
+            <!--     <input data-provide="datepicker" required="required"> -->
+            <input type="text" class="dateselect" required="required">
+            <span>Date</span>
+        </label>
+
+        <label>
+            <input type="text" class="dateselect2" required="required">
+            <span>Date</span>
+        </label>
+
+
+
+
+
+    </div>
+
+    <!-- https://uxsolutions.github.io/bootstrap-datepicker/?markup=input&format=&weekStart=&startDate=&endDate=&startView=0&minViewMode=0&maxViewMode=4&todayBtn=false&clearBtn=false&language=en&orientation=auto&multidate=&multidateSeparator=&keyboardNavigation=on&forceParse=on#sandbox -->
+    <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/js/bootstrap-datepicker.min.js"></script>
+    <script id="rendered-js">
+        // https://github.com/uxsolutions/bootstrap-datepicker
+
+        $('.dateselect').datepicker({
+            format: 'mm/dd/yyyy'
+            // startDate: '-3d'
+        });
+
+// $('.dateselect2').datepicker({
+//     format: 'mm/dd/yyyy',
+//     autoclose:true,
+//     todayHighlidht: true,
+// }).on("hide", function(){
+//   if ($)
+// }
+//# sourceURL=pen.js
+    </script>
+
+
+
+    <script type="text/javascript">(function () { window['__CF$cv$params'] = { r: '61a164ef69b342f4', m: '32b9af174f6edc67b0704908079549537735c674-1612074734-1800-Ab0B5PynWzxaQ6f882celsYznGrbA3a0V4mmvW5+dUwCDLXIx3BEMEzbmE3AKG0zmk34kJjD5HB5BZnUR2mca7+JKagXQnmDa1uBPsW0wIKw283MkrDrCGZ0RfNNIIjns4APE+YOL1EJQKeWfCJkh34=', s: [0xfc36266da3, 0x51d56ce6c4], } })();</script>
+
+
+
+</body>
+
+</html>

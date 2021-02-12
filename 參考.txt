@@ -66,3 +66,7 @@ https://codepen.io/salahuddin/full/LOmWpg
 https://www.jqueryscript.net/demo/material-date-range-picker/
 https://www.jqueryscript.net/demo/Simple-Clean-Date-Picker-Plugin-with-jQuery-Air-Datepicker/
 https://www.jqueryscript.net/
+
+--------------------------------
+> multiselect
+https://github.com/davidstutz/bootstrap-multiselect

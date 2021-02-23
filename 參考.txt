@@ -70,3 +70,7 @@ https://www.jqueryscript.net/
 --------------------------------
 > multiselect
 https://github.com/davidstutz/bootstrap-multiselect
+
+--------------------------------
+> oracle create table
+http://dbtim.blogspot.com/2016/05/table_22.html
